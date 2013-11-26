@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:py="http://genshi.edgewall.org/">
+  <xi:include href="layout.html" />
+  <head>
+    <div>
+      <title>${link.title}</title>
+    </div>
+  </head>
+  <body class="info">
+    <h1>${link.title}</h1>
+    <a href="${link.url}">${link.url}</a><br />
+    posted by ${link.username} at ${link.time.strftime('%x %X')}<br />
+    <ul py:if="link.question" class="question">
+      <strong>${link.question}</strong>
+    </ul>
+    <ul py:if="link.comments" class="comments">
+      <li py:for="idx, comment in enumerate(link.comments)" id="comment$idx">
+        <strong>${comment.username}</strong> at ${comment.time.strftime('%x %X')}
+        <blockquote style="color: #CCCCCC;" >${comment.content}</blockquote>
+      </li>
+    </ul>
+    <p><a style="background: #000;" class="action" href="${url('/comment/%s/' % link.id)}">Add comment</a></p>
+  </body>
+</html>

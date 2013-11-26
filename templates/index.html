@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:py="http://genshi.edgewall.org/">
+  <xi:include href="layout.html" />
+  <head>
+    <div>
+      <h1>n3wbl0g</h1>	
+    </div>	
+  </head>
+  <body class="index"><div>
+    <h2>a safe place for stupid questions</h2>
+    <ol py:if="links" class="links">
+      <li py:for="link in links">
+        <a href="${url('/info/%s/' % link.id)}">${link.title}</a>
+        <br></br> 
+        posted by ${link.username} at ${link.time.strftime('%x %X')} comments ${len(link.comments)}
+      </li>
+    </ol>
+    <div id="button"><a style="background: #000; color: 9966CC;" class="action" href="${url('/submit/')}">submit l0g</a></div>
+  </div></body>
+</html>

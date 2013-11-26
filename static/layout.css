@@ -1,0 +1,59 @@
+html, body { margin: 0; padding: 0; }
+body { background: #000 url('/media/cthulhu-reaches.gif') no-repeat center fixed; color: #999999; font: normal 90%/1.3 Arial,Helvetica,sans-serif; }
+:link, :visited { color: #66CC99; text-decoration: none; }
+:link:hover, :visited:hover { text-decoration: underline; }
+:link img, :visited img { border: none; }
+h1 { color: #666;
+  text-indent: -9999px; font: normal xx-large/1.5 Georgia,serif; margin: 0 0 .5em;
+}
+h2 { color: #999;
+  font: normal x-large/1.5 Georgia,serif; margin: 0 0 .5em;
+}
+title { color: #666;
+  font: normal x-large/1.5 Georgia,serif; margin: 0 0 .5em;
+}
+blockquote { font-style: italic; }
+form table { margin-bottom: 1em; }
+form table tbody th { font-weight: normal; padding-top: .3em; text-align: right;
+  vertical-align: top;
+}
+form label { color: #666; font-size: 90%; }
+
+
+#header { padding-bottom: 30px; padding-top: 20px; padding-left: 30px; float: left; }
+#ad { padding-top: 35px; padding-left: 60px; float:left; }
+#wrap { background-color: rgba(0,0,0,0.75); width: 1000px; margin: 30px auto; }
+#content { background-color:(0,0,0,0.75); min-height: 240px; padding-left: 30px; width: 700px; float: left; }
+#screenshot { height: 360px; width: 640px; position: relative; }
+#screenshot img { padding-left: 20px; height: 360px; width: 640px; position: absolute; bottom: 0px; }
+#footer { background: #4A4D4D; border-top: 2px solid #333; font-size: x-small; padding: 3px; text-align: center; }
+#footer hr { display: none; }
+.legalese { color: #999; margin: 0; }
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+#left { padding-right: 25px; padding-bottom: 10px; margin: 30px; background: #333; color:#444; height: 250px; float: left; } 
+#facebook { padding-top: 50px; padding-left: 35px; }
+#button { padding-bottom: 25px; }
+ul#menu li{ padding-top: 5px; }
+
+ol li { list-style:none; }
+ol.links li .info { font-size: 85%; }
+ol.links li .info :link, ol.links li .info :visited { color: #666; }
+
+ul.comments { list-style: none; margin: 1em 0; padding: 0 0 0 1em; }
+ul.comments li { color: #999; margin: 0 0 1em; }
+ul.comments blockquote { color: #333; font-style: normal; margin: 0;
+  padding: 0;
+}
+.action:link, .action:visited { background: #f3f3f3; border: 1px outset #ddd;
+  color: #666; font-size: 90%; padding: 0 .3em;
+}
+.action:link:hover, .action:visited:hover { background: #e8e8e8;
+  border-color: #aaa; color: #66CC99; text-decoration: none;
+}
+
+form p.hint { color: #666; font-size: 90%; font-style: italic; margin: 0; }
+form .error { color: #b00; }

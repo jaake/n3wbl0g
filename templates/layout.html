@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:fb="http://ogp.me/ns/fb#"
+      xmlns:py="http://genshi.edgewall.org/" py:strip="">
+
+  <py:match path="head" once="true">
+    <head py:attrs="select('@*')">
+      <title py:with="title = list(select('title/text()'))">
+        n3wbl0g<py:if test="title">: ${title}</py:if>
+      </title>
+      <link rel="stylesheet" href="${url('/media/layout.css')}" type="text/css" />
+      <link rel="icon" type="image/png" href="http://www.n3wbl0g.net/media/favicon.png" />
+      <script type="text/javascript" src="${url('/media/jquery.js')}"></script>
+      ${select('*[local-name()!="title"]')}
+    </head>
+  </py:match>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <py:match path="body" once="true">
+    <body py:attrs="select('@*')"><div id="wrap">
+      <div id="header">
+        <a href="/"><img src="${url('/media/logo.png')}" width="249" height="79" alt="n3wbl0g" /></a>
+      </div>
+      <div id="ad"><iframe data-aa='463' src='//ad.a-ads.com/463?background_color=333333' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+      </div>
+      <div style="clear:both"></div>
+      <div id="left">
+        <ul id="menu">
+	   <li><a href="/">h0m3</a></li>
+           <li><a href="${url('/tutorials/')}">tut0rials</a></li>
+           <li><a href="${url('/blog/')}">bl0g</a></li>
+           <li><a href="${url('/interesting/')}">int3r3sting</a></li>
+           <li><a href="${url('/join/')}">j0in n3wbl0g</a></li>
+           <li><a href="${url('/downloads/')}">d0wnl0ads</a></li>
+        </ul>
+       <div id="facebook"> 
+        <div class="fb-like" data-href="http://www.n3wbl0g.net" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-font="arial" data-colorscheme="dark"></div>
+       </div>
+      </div>
+      <div id="content">
+       ${select('*|text()')}
+      </div>
+      
+      <div style="clear:both"></div>
+
+      <div id="footer">
+        <hr />
+        <a href="http://ip-check.info/?lang=en" title="IP check"><img src="http://ip-check.org/ip-check.png" alt="IP check" align="center" width="200" height="100"/></a>
+        <!--<p class="legalese">© 2007 Edgewall Software</p>-->
+      </div>
+      <div style="clear:both"></div>
+    </div></body>
+  </py:match>
+</html>

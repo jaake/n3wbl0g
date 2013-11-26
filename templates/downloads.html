@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:py="http://genshi.edgewall.org/">
+  <xi:include href="layout.html" />
+  <head>
+    <div>
+      <h1>downloads</h1>
+    </div>
+  </head>
+  <body class="downloads">
+    <h2>d0wnl0ads</h2>
+    <ol py:if="stuff" class="stuff">
+      <li py:for="item in stuff">
+        <a href="${url('/download/?filepath=%s' % item)}">${item}</a>
+      </li>
+    </ol>
+  </body>
+</html> 
+
